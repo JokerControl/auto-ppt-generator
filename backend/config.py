@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     PORT: int = 8000
     
     # Storage settings
-    OUTPUT_DIR: str = "/app/output"
+    OUTPUT_DIR: str = "./output"
     MAX_FILE_SIZE: int = 50 * 1024 * 1024  # 50MB
     
     # Database

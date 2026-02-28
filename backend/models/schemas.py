@@ -71,7 +71,7 @@ class PPTOutlineResponse(BaseModel):
     """PPT大纲响应"""
     topic: str
     total_pages: int
-    outline: List[PPTLoutlineItem]
+    outline: List[PPTOutlineItem]
     theme: PPTTheme
     language: PPTLanguage
 
