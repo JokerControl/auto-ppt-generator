@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 interface PPTRecord {
   id: string;
@@ -18,8 +19,8 @@ export default function History() {
 
   const fetchRecords = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'}/api/ppt/list`);
-      const data = await response.json();
+      const response = await axios.get('/api/v1/ppt/list');
+      const data = response.data;
       if (data.records) {
         setRecords(data.records);
       }
